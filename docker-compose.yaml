@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  chatbot:
+    build: .
+    container_name: chatbot_streamlit
+    ports:
+      - "8501:8501"      # Streamlit frontend
+      - "11434:11434"    # Ollama server port (if you want Docker to access it)
+    volumes:
+      - .:/app           # Mount local folder for live code updates
+    environment:
+      PYTHONUNBUFFERED: 1
+    command: >
+      python -m streamlit run streamlit_frontend_threading.py
+      --server.port=8501
+      --server.address=0.0.0.0

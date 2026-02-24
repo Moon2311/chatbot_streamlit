@@ -1,0 +1,29 @@
+﻿# Core LangChain (NEW STACK)
+langchain==1.2.7
+langchain-openai==1.1.7
+langchain-text-splitters==1.1.0
+langgraph-prebuilt==1.0.7
+
+# Utilities
+python-dotenv==1.0.1
+PyYAML==6.0.1
+requests==2.32.4
+rich==13.7.1
+typing-extensions==4.14.1
+pydantic==2.11.7
+langchain-ollama
+
+# HTTP / Async
+httpx==0.28.1
+anyio==4.9.0
+
+# JSON helpers
+jsonpatch==1.33
+jsonpointer==3.0.0
+
+# Streamlit
+streamlit==1.25.0
+langchain-mcp-adapters
+
+fastmcp
+huggingface_hub
