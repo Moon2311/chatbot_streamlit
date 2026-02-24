@@ -5,14 +5,18 @@ from langgraph.graph.message import add_messages
 from langgraph.checkpoint.memory import InMemorySaver
 
 from langchain_core.messages import BaseMessage
-from langchain_ollama import ChatOllama
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 # -------------------------------
-# LLM (Ollama)
+# LLM (Hugging Face – Qwen)
 # -------------------------------
-llm = ChatOllama(
-    model="phi3",
-    base_url="http://localhost:11434"
+# Set HUGGINGFACEHUB_API_TOKEN for Inference API, or use HuggingFacePipeline for local.
+llm = ChatHuggingFace(
+    llm=HuggingFaceEndpoint(
+        repo_id="Qwen/Qwen2-7B-Instruct",
+        task="text-generation",
+        max_new_tokens=512,
+    )
 )
 
 # -------------------------------
