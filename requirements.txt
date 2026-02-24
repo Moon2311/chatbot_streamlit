@@ -1,4 +1,4 @@
-﻿# Core LangChain (NEW STACK)
+# Core LangChain (NEW STACK)
 langchain==1.2.7
 langchain-openai==1.1.7
 langchain-text-splitters==1.1.0
@@ -12,6 +12,7 @@ rich==13.7.1
 typing-extensions==4.14.1
 pydantic==2.11.7
 langchain-ollama
+langchain-huggingface
 
 # HTTP / Async
 httpx==0.28.1
